@@ -67,10 +67,10 @@ However it does not publist the port/make it accessible to outside the container
 It serves as metadata for documentation purpose only. \
 exposes a particular port with a specified protocol inside a Docker Container. In the simplest terms, the EXPOSE instruction tells Docker to get all the information required during the runtime from a specified port.
 
-**Step-4**
+**Step-4** \
 Exit and Save the Dockerfile - Press **esc** key and then type **:wq**.
 
-**Step-5**
+**Step-5** \
 To Create docker image of the project, run the following command inside the *getting-started-app* directory
 ```bash
 docker build -t day2-todo .
@@ -98,19 +98,19 @@ These layers are cached to speed up builds and optimize storage.
 - Layers are cached
 - Each layer is read-only, except the last one
 
-**Step-6**
+**Step-6** \
 Create a remote repository on Docker Hub
 - Visit *hub.docker.com*
 - Create a new repository, lets call it test-repo
 
-**Step-7**
+**Step-7** \
 Login to docker and enter your username and password.
 
 ```bash
 docker login
 ```
 
-**Step-8**
+**Step-8** \
 To push the image, we first need to tag the local image.
 ```bash
 docker tag day2-todo:latest mycodejorunal/new-repo:latest
@@ -130,7 +130,7 @@ mycodejorunal is the name of the my docker hub account. \
 new-repo is the name for remote repo image. \
 latest is the default tag when no tag is specified.
 
-**Step-9**
+**Step-9** \
 Now we can push the image
 
 ```bash
@@ -144,28 +144,28 @@ This tells docker to push the image
 
 This is name and tag of the image.
 
-**Step-10**
+**Step-10** \
 Now we can pull the image in any of the environment - dev/test/prod
 
 ```bash
 docker pull mycodejorunal/test-repo:latest
 ```
 
-**Step-11**
+**Step-11** \
 Run a Docker container from an image named mycodejorunal/test-repo:latest.
 
 > docker run -dp 3000:3000 mycodejorunal/test-repo:latest
 
 Creates and runs a new container from an image.
 
-**Step-12**
+**Step-12** \
 To check if the container is running, run following command -
 ```bash
 docker ps   
 ```
 This will also show the name of container and container id assigned by docker. 
 
-**Step-13**
+**Step-13** \
 Follwing command will let you enter the container and you will see the working directory of the container in the shell prompt.
 
 ```bash
